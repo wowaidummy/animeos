@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AnimeOS, a shinobi-themed personal desktop." />
+    <title>AnimeOS | Shinobi Desktop</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="os-shell" id="desktop" aria-label="AnimeOS desktop">
+      <div class="wallpaper-scene" aria-hidden="true"></div>
+      <section class="welcome-screen is-hidden" id="welcome-screen" aria-labelledby="welcome-title">
+        <div class="welcome-orbit welcome-orbit-one"></div>
+        <div class="welcome-orbit welcome-orbit-two"></div>
+        <div class="welcome-content">
+          <div class="leaf-crest" aria-hidden="true"><span></span></div>
+          <p class="eyebrow">HIDDEN LEAF DESKTOP / V1</p>
+          <h1 id="welcome-title">Anime<span>OS</span></h1>
+          <p class="welcome-copy">
+            Your quiet corner for missions, memories, and the next story.
+          </p>
+          <button class="primary-button" id="enter-desktop" type="button">
+            Return to desktop
+          </button>
+          <p class="welcome-hint">A shinobi's work is never finished.</p>
+        </div>
+      </section>
+
+      <header class="topbar" aria-label="System top bar">
+        <div class="topbar-left">
+          <button class="brand-button" id="home-button" type="button" aria-label="Open welcome screen">
+            <span class="brand-mark">忍</span>
+            <span>AnimeOS</span>
+          </button>
+          <span class="workspace-label">Hidden Leaf // Personal desktop</span>
+        </div>
+        <div class="topbar-right">
+          <span class="system-status"><i></i> Shinobi desk</span>
+        </div>
+      </header>
+
+      <section class="desktop-icons" aria-label="Applications">
+        <div class="desktop-shortcut"><button class="desktop-icon" type="button" data-open-window="about-window"><span class="app-glyph app-glyph-profile">忍</span><span>Shinobi Profile</span></button><button class="desktop-pin" type="button" data-pin-window="about-window" aria-label="Pin Shinobi Profile to taskbar" aria-pressed="false" title="Quick pin to taskbar">⌖</button></div>
+        <div class="desktop-shortcut"><button class="desktop-icon" type="button" data-open-window="watch-window"><span class="app-glyph app-glyph-mission">巻</span><span>Mission Watch</span></button><button class="desktop-pin" type="button" data-pin-window="watch-window" aria-label="Pin Mission Watch to taskbar" aria-pressed="false" title="Quick pin to taskbar">⌖</button></div>
+        <div class="desktop-shortcut"><button class="desktop-icon" type="button" data-open-window="jutsu-window"><span class="app-glyph app-glyph-jutsu">気</span><span>Chakra Lab</span></button><button class="desktop-pin" type="button" data-pin-window="jutsu-window" aria-label="Pin Chakra Lab to taskbar" aria-pressed="false" title="Quick pin to taskbar">⌖</button></div>
+        <div class="desktop-shortcut"><button class="desktop-icon" type="button" data-open-window="notes-window"><span class="app-glyph app-glyph-scroll">文</span><span>Memory Scrolls</span></button><button class="desktop-pin" type="button" data-pin-window="notes-window" aria-label="Pin Memory Scrolls to taskbar" aria-pressed="false" title="Quick pin to taskbar">⌖</button></div>
+        <div class="desktop-shortcut"><button class="desktop-icon" type="button" data-open-window="notepad-window"><span class="app-glyph app-glyph-scroll">帖</span><span>Field Scroll</span></button><button class="desktop-pin" type="button" data-pin-window="notepad-window" aria-label="Pin Field Scroll to taskbar" aria-pressed="false" title="Quick pin to taskbar">⌖</button></div>
+        <div class="desktop-shortcut"><button class="desktop-icon" type="button" data-open-window="paint-window"><span class="app-glyph app-glyph-paint">筆</span><span>Ink Studio</span></button><button class="desktop-pin" type="button" data-pin-window="paint-window" aria-label="Pin Ink Studio to taskbar" aria-pressed="false" title="Quick pin to taskbar">⌖</button></div>
+      </section>
+
+      <section class="desktop-prompt" aria-hidden="true">
+        <span>Click an app to open it</span>
+        <span class="prompt-line"></span>
+      </section>
+
+      <article class="app-window about-window is-open" id="about-window" data-window aria-labelledby="about-title">
+        <header class="window-header" data-drag-handle>
+          <div class="window-title">
+            <span class="window-dot window-dot-about"></span>
+            <span id="about-title">About me</span>
+          </div>
+          <button class="window-close" type="button" data-close-window="about-window" aria-label="Close About me">×</button>
+        </header>
+        <div class="window-body about-body">
+          <aside class="about-sidebar" aria-label="About me sections">
+              <p>SHINOBI FILE</p>
+              <button class="side-nav-button is-selected" type="button" data-about-tab="overview">Overview</button>
+            <button class="side-nav-button" type="button" data-about-tab="favorites">Favorites</button>
+            <button class="side-nav-button" type="button" data-about-tab="skills">Creative kit</button>
+            <div class="sidebar-footer">01 / 03</div>
+          </aside>
+          <div class="about-content">
+            <section class="about-panel is-visible" data-about-panel="overview">
+              <p class="eyebrow">WELCOME TO MY CORNER</p>
+              <h2>Stories in motion.</h2>
+              <p class="lead-copy">
+                I collect the details that make an animated world feel alive: color scripts, opening songs, small gestures, and impossible skies.
+              </p>
+              <div class="stat-grid">
+                <div class="stat-card"><span>MODE</span><strong>Curious</strong></div>
+                <div class="stat-card"><span>FOCUS</span><strong>Visual stories</strong></div>
+                <div class="stat-card"><span>STATUS</span><strong>Making notes</strong></div>
+              </div>
+              <div class="quote-card">
+                <span class="quote-line"></span>
+                <p>“Every episode is a new frame to keep.”</p>
+              </div>
+            </section>
+            <section class="about-panel" data-about-panel="favorites">
+              <p class="eyebrow">FAVORITE THINGS</p>
+              <h2>My repeat playlist.</h2>
+              <ul class="favorite-list">
+                <li><span>01</span><div><strong>Openings with a build-up</strong><p>Extra points for a final chorus that changes the animation.</p></div></li>
+                <li><span>02</span><div><strong>Background art</strong><p>Train stations at dusk, warm windows, and hand-painted clouds.</p></div></li>
+                <li><span>03</span><div><strong>Found-family arcs</strong><p>The quiet scenes between the action are always the ones that stay.</p></div></li>
+              </ul>
+            </section>
+            <section class="about-panel" data-about-panel="skills">
+              <p class="eyebrow">CREATIVE KIT</p>
+              <h2>Things I like building.</h2>
+              <div class="skill-list">
+                <div><span>Writing</span><div class="meter"><i style="width: 88%"></i></div><b>88%</b></div>
+                <div><span>Design</span><div class="meter"><i style="width: 76%"></i></div><b>76%</b></div>
+                <div><span>Code</span><div class="meter"><i style="width: 69%"></i></div><b>69%</b></div>
+              </div>
+              <p class="skill-note">This desktop is a living notebook. New apps arrive as new interests do.</p>
+            </section>
+          </div>
+        </div>
+      </article>
+
+      <article class="app-window watch-window" id="watch-window" data-window aria-labelledby="watch-title" aria-hidden="true">
+        <header class="window-header" data-drag-handle>
+          <div class="window-title">
+            <span class="window-dot window-dot-watch"></span>
+            <span id="watch-title">Watchlist</span>
+          </div>
+          <button class="window-close" type="button" data-close-window="watch-window" aria-label="Close Watchlist">×</button>
+        </header>
+        <div class="window-body watch-body">
+          <div class="watch-hero">
+            <div>
+              <p class="eyebrow">CURRENTLY PLAYING</p>
+              <h2>Afterimage Archive</h2>
+              <p>A tiny tracker for the worlds I want to visit next.</p>
+            </div>
+            <button class="outline-button" id="surprise-button" type="button">Pick for me</button>
+          </div>
+          <div class="watch-toolbar">
+            <div class="filter-group" aria-label="Filter watchlist">
+              <button class="filter-button is-active" type="button" data-filter="all">All <span>4</span></button>
+              <button class="filter-button" type="button" data-filter="watching">Watching <span>2</span></button>
+              <button class="filter-button" type="button" data-filter="queued">Queued <span>1</span></button>
+              <button class="filter-button" type="button" data-filter="finished">Finished <span>1</span></button>
+            </div>
+            <p id="watch-count">4 stories in the archive</p>
+          </div>
+          <div class="series-grid" id="series-grid">
+            <article class="series-card" data-status="watching">
+              <div class="series-art art-indigo"><span>01</span><b>STRANGER<br />THINGS</b></div>
+              <div class="series-detail"><p>WATCHING</p><h3>Stranger Things</h3><span>Supernatural mystery / 34 episodes</span></div>
+              <div class="episode-control" aria-label="Stranger Things episode tracker">
+                <button type="button" class="episode-minus" aria-label="Previous Stranger Things episode">−</button>
+                <strong><span class="episode-value">4</span><small>/34</small></strong>
+                <button type="button" class="episode-plus" aria-label="Next Stranger Things episode">+</button>
+              </div>
+            </article>
+            <article class="series-card" data-status="watching">
+              <div class="series-art art-gold"><span>02</span><b>HARRY<br />POTTER</b></div>
+              <div class="series-detail"><p>WATCHING</p><h3>Harry Potter</h3><span>Fantasy films / 8 movies</span></div>
+              <div class="episode-control" aria-label="Harry Potter film tracker">
+                <button type="button" class="episode-minus" aria-label="Previous Harry Potter film">−</button>
+                <strong><span class="episode-value">2</span><small>/8</small></strong>
+                <button type="button" class="episode-plus" aria-label="Next Harry Potter film">+</button>
+              </div>
+            </article>
+            <article class="series-card" data-status="queued">
+              <div class="series-art art-coral"><span>03</span><b>THE<br />MENTALIST</b></div>
+              <div class="series-detail"><p>QUEUED</p><h3>The Mentalist</h3><span>Crime drama / 151 episodes</span></div>
+              <div class="episode-control" aria-label="The Mentalist episode tracker">
+                <button type="button" class="episode-minus" aria-label="Previous The Mentalist episode">−</button>
+                <strong><span class="episode-value">0</span><small>/151</small></strong>
+                <button type="button" class="episode-plus" aria-label="Next The Mentalist episode">+</button>
+              </div>
+            </article>
+            <article class="series-card" data-status="finished">
+              <div class="series-art art-mint"><span>04</span><b>SUITS</b></div>
+              <div class="series-detail"><p>FINISHED</p><h3>Suits</h3><span>Legal drama / 134 episodes</span></div>
+              <div class="episode-control" aria-label="Suits episode tracker">
+                <button type="button" class="episode-minus" aria-label="Previous Suits episode">−</button>
+                <strong><span class="episode-value">134</span><small>/134</small></strong>
+                <button type="button" class="episode-plus" aria-label="Next Suits episode">+</button>
+              </div>
+            </article>
+          </div>
+          <p class="watch-message" id="watch-message" aria-live="polite">Choose a story and keep the momentum.</p>
+        </div>
+      </article>
+
+      <article class="app-window notes-window" id="notes-window" data-window aria-labelledby="notes-title" aria-hidden="true">
+        <header class="window-header" data-drag-handle>
+          <div class="window-title">
+            <span class="window-dot window-dot-notes"></span>
+            <span id="notes-title">Memory Scrolls</span>
+          </div>
+          <button class="window-close" type="button" data-close-window="notes-window" aria-label="Close Memory Scrolls">×</button>
+        </header>
+        <div class="window-body notes-body">
+          <p class="eyebrow">PERSONAL ARCHIVE</p>
+          <h2>Memory Scrolls.</h2>
+          <label for="scene-note">A moment worth keeping</label>
+          <textarea id="scene-note" maxlength="600" placeholder="A lesson from today's mission..."></textarea>
+          <div class="notes-actions">
+            <span id="note-count">0 / 600</span>
+            <button class="primary-button small-button" id="save-note" type="button">Seal scroll</button>
+          </div>
+          <p class="saved-note" id="saved-note" aria-live="polite"></p>
+          <ul class="scroll-entries" id="scroll-entries" aria-label="Saved memory scrolls"></ul>
+        </div>
+      </article>
+
+      <article class="app-window jutsu-window" id="jutsu-window" data-window aria-labelledby="jutsu-title" aria-hidden="true">
+        <header class="window-header" data-drag-handle>
+          <div class="window-title"><span class="window-dot window-dot-jutsu"></span><span id="jutsu-title">Chakra Lab</span></div>
+          <button class="window-close" type="button" data-close-window="jutsu-window" aria-label="Close Chakra Lab">×</button>
+        </header>
+        <div class="chakra-lab-body">
+          <div class="chakra-copy">
+            <p class="eyebrow">NATURE TRANSFORMATION</p>
+            <h2>Gather your chakra.</h2>
+            <p>Choose an affinity, then focus your breath to build a reserve.</p>
+            <div class="chakra-choices" role="group" aria-label="Chakra affinity">
+              <button class="jutsu-choice is-selected" type="button" data-jutsu="Wind Release">Wind</button>
+              <button class="jutsu-choice" type="button" data-jutsu="Fire Release">Fire</button>
+              <button class="jutsu-choice" type="button" data-jutsu="Water Release">Water</button>
+              <button class="jutsu-choice" type="button" data-jutsu="Earth Release">Earth</button>
+            </div>
+            <p id="jutsu-status" class="chakra-status" aria-live="polite">Wind Release selected. Focus your breathing.</p>
+          </div>
+          <div class="chakra-console">
+            <button class="chakra-core" id="charge-chakra" type="button" aria-label="Release chakra" aria-keyshortcuts="Enter"><span class="chakra-ring"></span><span class="chakra-symbol">気</span></button>
+            <div class="chakra-readout"><span id="chakra-level">72%</span><small>CHAKRA RESERVE</small></div>
+            <div class="chakra-meter"><i id="chakra-fill" style="width: 72%"></i></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="app-window notepad-window" id="notepad-window" data-window aria-labelledby="notepad-title" aria-hidden="true">
+        <header class="window-header" data-drag-handle>
+          <div class="window-title"><span class="window-dot window-dot-scroll"></span><span id="notepad-title">Field Scroll</span></div>
+          <button class="window-close" type="button" data-close-window="notepad-window" aria-label="Close Field Scroll">×</button>
+        </header>
+        <div class="notepad-body">
+          <div class="notepad-heading"><div><p class="eyebrow">QUICK NOTES</p><h2>Field Scroll</h2></div><span id="notepad-status" aria-live="polite">Saved locally</span></div>
+          <textarea id="notepad-text" aria-label="Field Scroll notes" placeholder="Jot down a thought before it slips away..." spellcheck="true"></textarea>
+        </div>
+      </article>
+
+      <article class="app-window paint-window" id="paint-window" data-window aria-labelledby="paint-title" aria-hidden="true">
+        <header class="window-header" data-drag-handle>
+          <div class="window-title"><span class="window-dot window-dot-paint"></span><span id="paint-title">Ink Studio</span></div>
+          <button class="window-close" type="button" data-close-window="paint-window" aria-label="Close Ink Studio">×</button>
+        </header>
+        <div class="paint-body">
+          <div class="paint-toolbar">
+            <label class="paint-control" for="paint-color">Ink <input type="color" id="paint-color" value="#8f302a" aria-label="Ink color"></label>
+            <label class="paint-control paint-size" for="paint-size">Brush <input type="range" id="paint-size" min="1" max="36" value="5"><span id="paint-size-label">5 px</span></label>
+            <div class="paint-actions"><button class="outline-button" type="button" id="paint-clear">Clear</button><button class="primary-button small-button" type="button" id="paint-save">Save PNG</button></div>
+          </div>
+          <canvas id="paint-canvas" aria-label="Drawing canvas"></canvas>
+        </div>
+      </article>
+
+      <section class="start-menu" id="start-menu" aria-label="Start menu" aria-hidden="true">
+        <div class="start-header"><span class="start-logo">忍</span><div class="start-info"><strong>AnimeOS</strong><span>Hidden Leaf desktop</span></div><button class="start-dismiss" type="button" id="start-dismiss" aria-label="Close start menu">×</button></div>
+        <p class="start-label">YOUR APPS</p>
+        <div class="start-apps-grid">
+          <button class="start-tile" type="button" data-open-window="about-window"><span class="start-tile-icon">忍</span><span>Shinobi Profile</span></button>
+          <button class="start-tile" type="button" data-open-window="watch-window"><span class="start-tile-icon">巻</span><span>Mission Watch</span></button>
+          <button class="start-tile" type="button" data-open-window="jutsu-window"><span class="start-tile-icon">気</span><span>Chakra Lab</span></button>
+          <button class="start-tile" type="button" data-open-window="notes-window"><span class="start-tile-icon">文</span><span>Memory Scrolls</span></button>
+          <button class="start-tile" type="button" data-open-window="notepad-window"><span class="start-tile-icon">帖</span><span>Field Scroll</span></button>
+          <button class="start-tile" type="button" data-open-window="paint-window"><span class="start-tile-icon">筆</span><span>Ink Studio</span></button>
+        </div>
+        <div class="start-footer"><span>Tea, notes, and another mission.</span><span>葉の里</span></div>
+      </section>
+
+      <footer class="taskbar" id="taskbar" aria-label="Taskbar">
+        <button class="start-button" id="start-button" type="button" aria-expanded="false" aria-controls="start-menu"><span class="start-button-mark">忍</span><span>Start</span></button>
+        <div class="taskbar-apps" id="taskbar-apps" aria-label="Pinned apps"></div>
+        <div class="taskbar-tray"><span class="tray-mark" aria-hidden="true">葉</span><time id="taskbar-clock" aria-live="off"></time></div>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
