@@ -1,3 +1,6 @@
+TO TEST GO TO: https://animeos-rust.vercel.app/
+else just download the repo and open the html file, you do not need to run any commands in the terminal
+
 hello reader, 
 this is the submission for make your own webos part 1,
 This webOS is completly anime themed. 
